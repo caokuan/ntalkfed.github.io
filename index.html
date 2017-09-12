@@ -1,69 +1,349 @@
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>小能FED</title>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Chat</title>
+		<style type="text/css">
+			* {
+				margin: 0px;
+				padding: 0px;
+			}
+			
+			@media only screen and (max-width: 300px) {
+				#bk {
+					width: 300px;
+				}
+			}
+			
+			@media only screen and (min-width: 300px) and (max-width: 600px) {
+				#bk {
+					width: 600px;
+				}
+			}
+			@media only screen and (min-width: 600px) and (max-width: 1200px) {
+				#bk {
+					width: 600px;
+				}
+			}
+			
+			#bk {
+				/*height: 600px;*/
+				/*width: 1100px;*/
+				border: 1px solid pink;
+				margin: 0 auto;
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+				flex-wrap: wrap;
+				position: relative;
+			}
+			
+			.bd1 {
+				background: url(img/22-中国联通.png) no-repeat center;
+				width: 148px;
+				height: 148px;
+				border: 1px solid #ccc;
+				border-radius: 100%;
+				float: left;
+				margin: 20px;
+			}
+			
+			.bd2 {
+				background: url(img/6-蜜芽宝贝.png) no-repeat center;
+				width: 148px;
+				height: 148px;
+				border: 1px solid #ccc;
+				border-radius: 100%;
+				float: left;
+				margin: 20px;
+			}
+			
+			.bd3 {
+				background: url(img/19-车城.png) no-repeat center;
+				width: 148px;
+				height: 148px;
+				border: 1px solid #ccc;
+				border-radius: 100%;
+				float: left;
+				margin: 20px;
+			}
+			
+			.bd4 {
+				background: url(img/2-360健康.png) no-repeat center;
+				width: 148px;
+				height: 148px;
+				border: 1px solid #ccc;
+				border-radius: 100%;
+				float: left;
+				margin: 20px;
+			}
+			
+			/*.bd5 {
+				background: url(img/1-新东方.png) no-repeat center;
+				width: 148px;
+				height: 148px;
+				border: 1px solid #ccc;
+				border-radius: 100%;
+				float: left;
+				margin: 20px;
+			}*/
+			
+			.bd6 {
+				background: url(img/20-九牧网.png) no-repeat center;
+				width: 148px;
+				height: 148px;
+				border: 1px solid #ccc;
+				border-radius: 100%;
+				float: left;
+				margin: 20px;
+			}
+			
+			.bd7 {
+				background: url(img/7-火星时代.png) no-repeat center;
+				width: 148px;
+				height: 148px;
+				border: 1px solid #ccc;
+				border-radius: 100%;
+				float: left;
+				margin: 20px;
+			}
+			
+			.bd8 {
+				background: url(img/18-学为贵.png) no-repeat center;
+				width: 148px;
+				height: 148px;
+				border: 1px solid #ccc;
+				border-radius: 100%;
+				float: left;
+				margin: 20px;
+			}
+			
+			.bd9 {
+				background: url(img/1-新东方.png) no-repeat center;
+				width: 148px;
+				height: 148px;
+				border: 1px solid #ccc;
+				border-radius: 100%;
+				float: left;
+				margin: 20px;
+			}
+			
+			.bd10 {
+				background: url(img/2-PPMONEY.png) no-repeat center;
+				width: 148px;
+				height: 148px;
+				border: 1px solid #ccc;
+				border-radius: 100%;
+				float: left;
+				margin: 20px;
+			}
+			
+			.bd11 {
+				background: url(img/6-投哪网.png) no-repeat center;
+				width: 148px;
+				height: 148px;
+				border: 1px solid #ccc;
+				border-radius: 100%;
+				float: left;
+				margin: 20px;
+			}
+			
+			.bd12 {
+				background: url(img/1-OPPO.png) no-repeat center;
+				width: 148px;
+				height: 148px;
+				border: 1px solid #ccc;
+				border-radius: 100%;
+				float: left;
+				margin: 20px;
+			}
+			
+			.bd13 {
+				background: url(img/21-斯凯奇.jpg) no-repeat center;
+				width: 148px;
+				height: 148px;
+				border: 1px solid #ccc;
+				border-radius: 100%;
+				float: left;
+				margin: 20px;
+			}
+			
+			.bd14 {
+				background: url(img/1-壹药网.png) no-repeat center;
+				width: 148px;
+				height: 148px;
+				border: 1px solid #ccc;
+				border-radius: 100%;
+				float: left;
+				margin: 20px;
+			}
+			
+			.bd15 {
+				background: url(img/4-齐家网.png) no-repeat center;
+				width: 148px;
+				height: 148px;
+				border: 1px solid #ccc;
+				border-radius: 100%;
+				float: left;
+				margin: 20px;
+			}
+			
+			.bd16 {
+				background: url(img/2-魅族.png) no-repeat center;
+				width: 148px;
+				height: 148px;
+				border: 1px solid #ccc;
+				border-radius: 100%;
+				float: left;
+				margin: 20px;
+			}
+			
+			.bd17 {
+				background: url(img/23-神奇工场.jpg) no-repeat center;
+				width: 148px;
+				height: 148px;
+				border: 1px solid #ccc;
+				border-radius: 100%;
+				float: left;
+				margin: 20px;
+			}
+			
+			.zx {
+				display: block;
+				width: 60px;
+				height: 70px;
+				background: #01ABF3;
+				position: fixed;
+				right: 20px;
+				bottom: 100px;
+				border-radius: none;
+				cursor: pointer;
+			}
+			
+			.zx>img {
+				display: block;
+				margin: 20px auto;
+			}
+		</style>
+	</head>
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #F8F8F8;
-                color: #000;
-                font-family: sans-serif;
-                font-weight: 100;
-                height: 100vh;
-                margin: 0;
-            }
+	<body>
+		<!-- <div onclick="NTKF.im_openInPageChat()">点击</div> -->
+		<div id="bk">
 
-            .full-height {
-                height: 100vh;
-            }
+			<div class="bd1"></div>
+			<div class="bd2"></div>
+			<div class="bd3"></div>
+			<div class="bd4"></div>
+			<!--<div class="bd5"></div>-->
+			<div class="bd6"></div>
+			<div class="bd7"></div>
+			<div class="bd8"></div>
+			<!--<div class="bd9"></div>-->
+			<div class="bd10"></div>
+			<div class="bd11"></div>
+			<div class="bd12"></div>
+			<div class="bd13"></div>
+			<div class="bd14"></div>
+			<div class="bd15"></div>
+			<div class="bd16"></div>
+			<div class="bd17"></div>
+			<span class="zx"><img src="img/chat.png"/></span>
+		</div>
+	</body>
+	<script>
+		var NTKF_PARAM = {
 
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
+			siteid: 'kf_9290', //平台基础id
+			settingid: 'kf_9290_1464752037667',
 
-            .position-ref {
-                position: relative;
-            }
+		}
+	</script>
+	<script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js "></script>
+	<script type="text/javascript" src="./siteid/kf_9290/ntkfstat.js"></script>
+	
+	<script>
+		var arr = [
+		{
+				siteid: 'bl_1000', //北京联通1
+				logo: ''
+			},
+			{
+				siteid: 'hw_1000', //蜜芽2
+				logo: ''
+			},
+			{
+				siteid: 'en_1000', //车城3
+				logo: ''
+			},
+			{
+				siteid: 'gy_1000', //360健康4
+				logo: ''
+			},
+			
+			{
+				siteid: 'jo_1000', //九牧网5
+				logo: ''
+			},
+			{
+				siteid: 'kf_9016', //火星网7
+				logo: ''
+			},
+			{
+				siteid: 'kf_9006', //学为贵8
+				logo: ''
+			},
+			{
+				siteid: 'kf_9150', //PPmoney10
+				logo: ''
+			},
+			{
+				siteid: 'kf_9201', //头哪网11
+				logo: ''
+			},
+			{
+				siteid: 'kf_9568', //OPPO12
+				logo: ''
+			},
+			{
+				siteid: 'kf_9586', //斯凯奇13
+				logo: ''
+			},
+			{
+				siteid: 'yy_1000', //壹药网14
+				logo: ''
+			},
+			{
+				siteid: 'qj_1000', //齐家网15
+				logo: ''
+			},
+			{
+				siteid: 'zu_1000', //魅族16
+				logo: ''
+			},
+			{
+				siteid: 'kf_9151', //  神奇工场17
+				logo: ''
+			}
+		];
+		$(function() {
+			$("#bk>div").on("click", function() {
+				$("#bk>div").css('border', '1px solid #ccc');
+				$(this).css('border', '1px solid #01ABF3');
+				var indx = $(this).index();
+				var id = arr[indx];
+				var btn = './siteid/kf_9290/themes/' + id.siteid;
+				NTKF.global.themes = btn;
+//				console.log(NTKF.global.themes);
+			});
+			$('.zx').on("click", function() {
+				NTKF.im_openInPageChat();
 
-            .content {
-                position: relative;
-                text-align: center;
-            }
+			});
+		})
+	</script>
 
-            .content .build {
-                position: absolute;
-                top: -10px;
-                left: -70px;
-            }
-
-            .title {
-                font-size: 32px;
-                font-weight: 400;
-            }
-
-            .m-b-md {
-                margin-bottom: 500px;
-            }
-
-
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            <div class="content">
-                <div class="title m-b-md">
-                    小能FED正在建设中……
-                    <img class="build" src="./images/main/building.png">
-                </div>
-            </div>
-        </div>
-    </body>
 </html>
