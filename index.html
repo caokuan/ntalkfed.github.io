@@ -5,7 +5,7 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-		<title>小能聊窗自定义ui前端展示</title>
+		<title>Chat</title>
 		<style type="text/css">
 			* {
 				margin: 0px;
@@ -71,7 +71,7 @@
 				margin: 20px;
 			}
 			
-			.bd4 {
+			/*.bd4 {
 				background: url(img/2-360健康.png) no-repeat center;
 				width: 148px;
 				height: 148px;
@@ -79,7 +79,7 @@
 				border-radius: 100%;
 				float: left;
 				margin: 20px;
-			}
+			}*/
 			
 			/*.bd5 {
 				background: url(img/1-新东方.png) no-repeat center;
@@ -237,7 +237,7 @@
 			<div class="bd1"></div>
 			<div class="bd2"></div>
 			<div class="bd3"></div>
-			<div class="bd4"></div>
+			<!-- <div class="bd4"></div> -->
 			<!--<div class="bd5"></div>-->
 			<div class="bd6"></div>
 			<div class="bd7"></div>
@@ -257,13 +257,13 @@
 	<script>
 		var NTKF_PARAM = {
 
-			siteid: 'kf_9290', //平台基础id
-			settingid: 'kf_9290_1464752037667',
+			siteid: 'kf_9221', //平台基础id
+			settingid: 'kf_9221_1460431423053',
 
 		}
 	</script>
 	<script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js "></script>
-	<script type="text/javascript" src="./siteid/kf_9290/ntkfstat.js"></script>
+	<script type="text/javascript" src="./siteid/kf_9221/ntkfstat.js"></script>
 	
 	<script>
 		var arr = [
@@ -335,7 +335,7 @@
 				$(this).css('border', '1px solid #01ABF3');
 				var indx = $(this).index();
 				var id = arr[indx];
-				var btn = './siteid/kf_9290/themes/' + id.siteid;
+				var btn = './siteid/kf_9221/themes/' + id.siteid;
 				NTKF.global.themes = btn;
 //				console.log(NTKF.global.themes);
 			});
